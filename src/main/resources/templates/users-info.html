@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Users</h2>
+<table border="1">
+    <tr>
+        <th>name</th>
+        <th>surname</th>
+    </tr>
+    <tr th:each = "user: ${users}">
+        <td><a th:href="'/user/show/' + ${user.id}" th:text="${user.name} + ' ' + ${user.surname}"></a></td>
+        <td><button>Edit</button></td>
+        <td><button>Delete</button></td>
+    </tr>
+</table>pg_read_server_files
+<button>Add user</button>
+</body>
+</html>
