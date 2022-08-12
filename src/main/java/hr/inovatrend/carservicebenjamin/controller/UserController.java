@@ -40,7 +40,7 @@ public class UserController {
     @PostMapping("/add")
     public String addUser(@ModelAttribute User user) {
         userService.addUser(user);
-        return "user-info";
+        return "redirect:/user/show/" + user.getId();
     }
 
     @GetMapping(value = "/deleteUser/{id}")
